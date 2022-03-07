@@ -6,7 +6,7 @@ import Loading from './Loading';
 const INITIAL_STATE = {
   name: '',
   btnLoading: true,
-  isLoading: false,
+  isLoaded: false,
   loading: false,
 };
 
@@ -38,13 +38,13 @@ class Login extends Component {
       await createUser({ name });
       this.setState({
         loading: false,
-        isLoading: true,
+        isLoaded: true,
       });
     });
   }
 
   render() {
-    const { btnLoading, isLoading, loading } = this.state;
+    const { btnLoading, isLoaded, loading } = this.state;
 
     return (
       <div data-testid="page-login">
@@ -58,7 +58,7 @@ class Login extends Component {
                   name="name"
                   id="name-input"
                   data-testid="login-name-input"
-                  onChange={ (event) => this.handleChange(event) }
+                  onChange={ this.handleChange }
                 />
               </label>
 
@@ -67,7 +67,7 @@ class Login extends Component {
                 name="btnLoading"
                 id="submit-button"
                 data-testid="login-submit-button"
-                onClick={ (event) => this.btnSubmit(event) }
+                onClick={ this.btnSubmit }
                 disabled={ btnLoading }
               >
                 Entrar
@@ -76,7 +76,7 @@ class Login extends Component {
           )
         }
         {/* renderiza pra search */}
-        { isLoading && <Redirect to="/search" /> }
+        { isLoaded && <Redirect to="/search" /> }
       </div>
     );
   }
