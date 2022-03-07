@@ -27,6 +27,7 @@ class Login extends Component {
     }));
   }
 
+  // renderiza a msg de 'carregando' até a API ser chamada
   btnSubmit = (event) => {
     event.preventDefault();
 
@@ -66,7 +67,7 @@ class Login extends Component {
                 name="btnLoading"
                 id="submit-button"
                 data-testid="login-submit-button"
-                onClick={ (event) => this.handleChange(event) }
+                onClick={ (event) => this.btnSubmit(event) }
                 disabled={ btnLoading }
               >
                 Entrar
@@ -74,7 +75,7 @@ class Login extends Component {
             </form>
           )
         }
-
+        {/* renderiza pra search */}
         { isLoading && <Redirect to="/search" /> }
       </div>
     );
