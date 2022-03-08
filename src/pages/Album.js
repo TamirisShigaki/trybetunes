@@ -4,7 +4,9 @@ import Header from '../Components/Header';
 class Album extends Component {
   render() {
     return (
-      <div data-testid="page-album"><Header /></div>
+      <div data-testid="page-album">
+        <Header />
+      </div>
     );
   }
 }

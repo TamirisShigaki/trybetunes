@@ -4,7 +4,9 @@ import Header from '../Components/Header';
 class Favorites extends Component {
   render() {
     return (
-      <div data-testid="page-favorites"><Header /></div>
+      <div data-testid="page-favorites">
+        <Header />
+      </div>
     );
   }
 }
