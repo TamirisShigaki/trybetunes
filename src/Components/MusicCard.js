@@ -8,7 +8,7 @@ class MusicCard extends Component {
       <div>
         {
           musics.map((music) => (
-            <div key={ music.trackid }>
+            <div key={ music.trackId }>
               <p>{music.trackName}</p>
               <audio data-testid="audio-component" src={ music.previewUrl } controls>
                 <track kind="captions" />
