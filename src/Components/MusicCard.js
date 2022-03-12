@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../pages/Loading';
 
 class MusicCard extends Component {
@@ -11,6 +11,10 @@ class MusicCard extends Component {
       loading: false,
       checked: [],
     };
+  }
+
+  async componentDidMount() {
+    this.savedMusics();
   }
 
 favoriteMusic = async (event) => {
@@ -24,6 +28,14 @@ favoriteMusic = async (event) => {
   await addSong(favorito); // add meu favorito na aPI
   this.setState({
     loading: false,
+  });
+}
+
+savedMusics = async () => {
+  const favoriteSong = await getFavoriteSongs();
+  const idSavedMusic = favoriteSong.map((song) => song.trackId);
+  this.setState({
+    checked: idSavedMusic,
   });
 }
 
