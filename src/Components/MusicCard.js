@@ -32,8 +32,8 @@ favoriteMusic = async (event) => {
 }
 
 savedMusics = async () => {
-  const favoriteSong = await getFavoriteSongs();
-  const idSavedMusic = favoriteSong.map((song) => song.trackId);
+  const favoriteSong = await getFavoriteSongs(); // lista com musicas salvas
+  const idSavedMusic = favoriteSong.map((song) => song.trackId); // pega os id das musicas salvas
   this.setState({
     checked: idSavedMusic,
   });
