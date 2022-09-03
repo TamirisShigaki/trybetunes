@@ -4,8 +4,8 @@
 
 ## Contexto
 
-Projeto pessoal desenvolvido na Trybe, onde tive que desenvolver um aplicativo de musica, sendo possivel filtrar os albuns por artistas preferidos, ter uma previa das musicas do album expecifico. Album e musicas são adquiridas através da API do Itunes.
+Projeto pessoal desenvolvido na Trybe, onde tive que desenvolver um aplicativo de música, sendo possível filtrar os álbuns por artistas preferidos, ter uma prévia das músicas do álbum especifico. Álbum e musicas são adquiridas através da API do Itunes.
 
-Esse projeto foi feito como validação do bloco de `Ciclo de Vida de Componentes e React Router` no modulo de `Front-End da Trybe`.
+Esse projeto foi feito como validação do bloco de `Ciclo de Vida de Componentes e React Router no módulo de Front-End da Trybe`.
 
-A aplicação consiste em uma pagina de `Login, Home, Profile, Profile Edit, Álbum, Favorite e Not Found.`
+A aplicação consiste em uma página de `Login, Home, Profile, Profile Edit, Álbum, Favorite e Not Found`.
